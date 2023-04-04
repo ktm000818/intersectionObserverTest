@@ -1,10 +1,9 @@
-import Test from "components/Test";
+import View from "@/components/View";
 
 const App = () => {
-    return <div>
-        <div>Hello taemin!!</div>
-        <Test/>
-        </div>
+    return (
+        <View/>
+    )
 }
 
 export default App;
