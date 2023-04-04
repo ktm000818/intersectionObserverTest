@@ -1,3 +1,4 @@
+const DotenvWebpackPlugin = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
@@ -18,6 +19,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
+    }),
+    new DotenvWebpackPlugin({
+      path: path.resolve(__dirname, "..", ".env"),
+      safe: true
     }),
     new webpack.ProvidePlugin({
       React: "react",
